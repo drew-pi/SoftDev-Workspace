@@ -1,12 +1,17 @@
-
-
 from pprint import pprint
 import random as rng
+'''
+Andrew Piatetsky
+SoftDev
+K04 -- krewes / Random Picking
+2022-09-23
+time spent: 0.5 hours
+'''
 
 '''
 DISCO:
 there is a random module in python, there are many functions/methods that come with
-that library
+that library 
 
 dictionaries are iterable, but they are not sequences because you can't refer to the
 keys as indeces, they are hashes
@@ -15,6 +20,7 @@ QCC:
 How does random work? we think it refernces the time or mouse movement perhaps?
 
 Do we have to change the devos into actual names later?
+RESOLVED
 
 
 OPS SUMMARY:
@@ -23,6 +29,7 @@ Our code first picks a random key from a list of the available keys and then we 
 from the list value associated with the key, then it returns that random person and the period 
 
 '''
+
 
 
 
