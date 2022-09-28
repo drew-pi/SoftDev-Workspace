@@ -1,5 +1,4 @@
-from pprint import pprint
-import random as rng
+import random as rd
 '''
 Andrew Piatetsky
 SoftDev
@@ -33,13 +32,6 @@ from the list value associated with the key, then it returns that random person 
 
 
 
-# krewes = {2:[],7:[],8:[]}
-# 
-# # fill in the dictionary
-# for key in krewes:
-#     for num in range(35):
-#         krewes[key].append('devo' + str(num))
-
 
 krewes = {
            2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "CORINA",  "CRAIG",  "FANG MIN",  "JEFF",  "KONSTANTIN",  "AARON",  "VIVIAN",  "AYMAN",  "TALIA",  "FAIZA",  "ZIYING",  "YUK KWAN",  "DANIEL",  "WEICHEN",  "MAYA",  "ELIZABETH",  "ANDREW",  "VANSH",  "JONATHAN",  "ABID",  "WILLIAM",  "HUI",  "ANSON",  "KEVIN",  "DANIEL",  "IVAN",  "JASMINE",  "JEFFREY"], 
@@ -51,15 +43,12 @@ krewes = {
 def pick_rand(peeps: dict):
     
     # get random period
-    periods = []
-    for key in peeps:
-        periods.append(key)
-    rand_period = rng.choice(periods)
-    
+    rand_period = rd.choice(list(peeps))
+
     # get random person from the chosen period
-    rand_devo = rng.choice(peeps[rand_period])
-    
-    return (str(rand_devo) + ' from period ' + str(rand_period))
+    rand_devo = rd.choice(peeps[rand_period])
+     
+    return f"{rand_period} : {rand_devo}"
     
     
 
