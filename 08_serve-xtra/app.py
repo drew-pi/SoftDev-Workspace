@@ -37,18 +37,38 @@ def randomizer():
             return (f"Occupation: {i}",i)
         lower += pdict[i]
 
-
-@app.route("/") #this is the root route
-# the main dispaly method
-def display(): 
+@app.route("/")#this is the root route
+def display():
     header = "Brian, Andrew, Yusha<br>SoftDev<br>K08 -- Serve<br>2022-10-06<br>"
     strlst = ""
     for i in range(0,len(splitlst)):
         strlst += (f"{splitlst[i][0]}, ")
     return(f"{header}<br>{strlst}<br><br>{randomizer()[0]}")
 
+@app.route("/testes/<sx>")
+def testes(sx): #plural for test, runs randomizer and gives %
+    x = int(sx)
+    final = ""
+    totalerror = 0.0
+    numdict = {}
+    for i in splitlst:
+        numdict[i[0]] = 0
+    for i in range(x):
+        k = randomizer()[1]
+        numdict[k] += 1
+    for i in splitlst:
+        actual = float(int(numdict[i[0]])/(x/100))
+        final += f"{i[0]} <br>     intended: {i[1]} <br>     actual: {round(actual,2)}<br>"
+        error = abs(actual-float(i[1]))/float(i[1]) #percent error equation
+        totalerror += error
+    return(f"{final}<br>Average error is {round((100*totalerror)/len(splitlst),2)}%")
+
+
+@app.route("/name")       #assign fxn to route
+def name():
+    return __name__
+
+
 if __name__ == "__main__":  # true if this file NOT imported
-    print('test')
     app.debug = True        # enable auto-reload upon code change
-    app.run(port=5001)
-    # app.run(host='0.0.0.0')
+    app.run()
