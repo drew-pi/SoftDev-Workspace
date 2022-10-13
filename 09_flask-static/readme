@@ -1,3 +1,6 @@
+Andrew Piatetsky, 
+
+
 notes:
 When you do http: ... /static/foo, so try to open a text file it tells you to download that file 
 It also gives a strange response (304), which isn't 200 or 400, for worked and didn't work

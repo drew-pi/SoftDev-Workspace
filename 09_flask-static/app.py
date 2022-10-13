@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
+# Andrew Piatetsky (BBAY)
 # SoftDev
-# Oct 2022
+# K10 -- flask-jinja
+# 2022-10-13
+# time spent: 30 mins
 
 # DEMO 
 # basics of /static folder
