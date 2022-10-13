@@ -1,9 +1,3 @@
-Andrew Piatetsky (BBAY)
-SoftDev
-K10 -- flask-jinja
-2022-10-13
-time spent: 30 mins
-
 Disco:
 You cannot just put template filename into url.
 
