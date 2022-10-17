@@ -30,34 +30,26 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/", methods=["GET"])
 def disp_loginpage():
-#     print("\n\n\n")
-#     print("***DIAG: this Flask obj ***")
     print(app)
-#     print("***DIAG: request obj ***")
     print(request)
-#     print("***DIAG: request.args ***")
-#     print(request.forms)
-#      print("***DIAG: request.args['auth']  ***")
-#     print(request.args['auth'])
-#     print("***DIAG: request.headers ***")
-#     print(request.headers)
     return render_template( 'login.html' )
 
 
-@app.route("/response", methods=["GET"])
+@app.route("/response", methods=["POST"])
 def respond():
     print("\n\n\n")
 #     print("***DIAG: this Flask obj ***")
     print(app)
 #     print("***DIAG: request obj ***")
     print(request.form)
+    print(request.method)
 #     print("***DIAG: request.args ***")
-    print(request.args)
+    # print(request.args)
 #     print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    # print(request.args['username'])
 #     print("***DIAG: request.headers ***")
 #     print(request.headers)
-    return render_template( 'response.html',ssn = request.args['username'])
+    return render_template( 'response.html',ssn = request.form['username'])
 
 
     
