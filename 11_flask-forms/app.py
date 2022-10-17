@@ -32,11 +32,11 @@ PROTIP: Insert your own in-line comments
 def disp_loginpage():
 #     print("\n\n\n")
 #     print("***DIAG: this Flask obj ***")
-#     print(app)
+    print(app)
 #     print("***DIAG: request obj ***")
-#     print(request)
+    print(request)
 #     print("***DIAG: request.args ***")
-#     print(request.args)
+#     print(request.forms)
 #      print("***DIAG: request.args['auth']  ***")
 #     print(request.args['auth'])
 #     print("***DIAG: request.headers ***")
@@ -44,20 +44,20 @@ def disp_loginpage():
     return render_template( 'login.html' )
 
 
-@app.route("/response", methods=["GET","POST"])
+@app.route("/response", methods=["GET"])
 def respond():
-#     print("\n\n\n")
+    print("\n\n\n")
 #     print("***DIAG: this Flask obj ***")
-#     print(app)
+    print(app)
 #     print("***DIAG: request obj ***")
-#     print(request)
+    print(request.form)
 #     print("***DIAG: request.args ***")
     print(request.args)
 #     print("***DIAG: request.args['username']  ***")
     print(request.args['username'])
 #     print("***DIAG: request.headers ***")
 #     print(request.headers)
-    return render_template( 'response.html',ssn = requests.args['username'])
+    return render_template( 'response.html',ssn = request.args['username'])
 
 
     
