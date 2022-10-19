@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(97, 96, 96);
+}
+
+h1 {
+    background-color: lightgrey;
+    color: whitesmoke;
+    text-align: center;
+}
+
+h2,h3 {
+    color: black;
+}
+
+nav {
+    float:left;
+    width:20%;
+    color: white;
+}
+
+.rightcolumn {
+    float: right;
+    width:80%;
+}
