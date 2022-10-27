@@ -2,7 +2,7 @@ import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 import os
 
-os.system('rm -rf discobandit.db') # this is to delete the dataframe file as to not encounter any errors during testing
+# os.system('rm -rf discobandit.db') # this is to delete the dataframe file as to not encounter any errors during testing
 
 
 def populate_table(file_name,table_name,elements,keys):
@@ -10,7 +10,7 @@ def populate_table(file_name,table_name,elements,keys):
     db = sqlite3.connect(file_name) #open if file exists, otherwise create
     c = db.cursor() # creates cursor object to pass commands to the database
 
-    c.execute(f'''create table {table_name}('{keys[0]}' text, {keys[1]} int, {keys[2]} text);''') # creates the table
+    c.execute(f'''create table if not exists {table_name}('{keys[0]}' text, {keys[1]} int, {keys[2]} text);''') # creates the table
     for row in elements:
 
         # iterate through the elements and add them to the table ( row by row )
