@@ -1,0 +1,67 @@
+/* Response Text */
+.response {
+	position:fixed;
+	top: 2%
+}
+
+#logout {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+/* Arrow */
+
+.arrow {
+	position: absolute;
+	right: 100px;
+	width: 10%;
+	transform: rotate(-120deg)
+}
+
+/* Label */
+.arrow .label {
+	position: absolute;
+	right: 0px;
+	top: 40px;
+	transform: rotate(100deg)
+}
+
+.arrow .curve {
+	border: 2px solid #BE5F4B;
+	border-color: transparent transparent transparent #BE5F4B;
+	height: 360px;
+	width: 1200px;
+	border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+	position: absolute;
+	left: 40px;
+	top: 315px;
+}
+
+.arrow .point:before, .arrow .point:after {
+	border: 1px solid #BE5F4B;
+	height: 25px;
+	content: "";
+	position: absolute;
+}
+
+.arrow .point:before {
+	top: -11px;
+	left: -11px;
+	transform:rotate(-74deg);
+	-webkit-transform:rotate(-74deg);
+	-moz-transform:rotate(-74deg);
+	-ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+  	top: -20px;
+	left: 5px;
+	transform:rotate(12deg);
+	-webkit-transform: rotate(12deg);
+	-moz-transform:rotate(12deg);
+	-ms-transform: rotate(12deg);
+}
