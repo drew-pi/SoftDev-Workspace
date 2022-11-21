@@ -50,12 +50,15 @@ def login():
     if request.method == 'POST':
         input_usrname = request.form['username']
         input_pwd = request.form['password']
-        if input_usrname == username and input_pwd == password:
-            session['username'] = input_usrname
-            session['password'] = input_pwd
-            return redirect('/')
+        if input_usrname == username:
+            if input_pwd == password:
+                session['username'] = input_usrname
+                session['password'] = input_pwd
+                return redirect('/')
+            else:
+                msg = 'wrong pwd for this username'
         else:
-            msg = 'wrong password bud'
+            msg = "username does't exist"
 
     return render_template('login.html',fail_login = msg)
 
