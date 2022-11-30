@@ -249,13 +249,8 @@ $accordion-content-color: $body-font-color;
 $accordion-content-padding: 1rem;
 
 // 8. Accordion Menu
-$foundation-palette: (
-  "primary": #1779ba,
-  "secondary": #767676,
-  "success": #3adb76,
-  "warning": #ffae00,
-  "alert": #cc4b37,
-);
+// -----------------
+
 $accordionmenu-padding: $global-menu-padding;
 $accordionmenu-nested-margin: $global-menu-nested-margin;
 $accordionmenu-submenu-padding: $accordionmenu-padding;
@@ -336,13 +331,19 @@ $buttongroup-radius-on-each: true;
 // -----------
 
 $callout-background: $white;
-$callout-background-fade: 85%;$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );
+$callout-background-fade: 85%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-sizes: (
+  "small": 0.5rem,
+  "default": 1rem,
+  "large": 3rem,
+);
+$callout-font-color: $body-font-color;
+$callout-font-color-alt: $body-background;
+$callout-radius: $global-radius;
+$callout-link-tint: 30%;
+
 // 14. Card
 // --------
 
@@ -561,13 +562,6 @@ $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
 $pagination-radius: $global-radius;
 $pagination-item-background-hover: $light-gray;
-$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );
 $pagination-item-background-current: $primary-color;
 $pagination-item-color-current: $white;
 $pagination-item-color-disabled: $medium-gray;
@@ -607,13 +601,9 @@ $prototype-border-box-breakpoints: $global-prototype-breakpoints;
 // 31. Prototype Border-None
 // -------------------------
 
-$prototype-border-none-breakpoints: $global-$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );
+$prototype-border-none-breakpoints: $global-prototype-breakpoints;
+
+// 32. Prototype Bordered
 // ----------------------
 
 $prototype-bordered-breakpoints: $global-prototype-breakpoints;
@@ -679,13 +669,8 @@ $prototype-position: (
   relative,
   absolute,
   fixed
-);$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );
+);
+$prototype-position-z-index: 975;
 
 // 38. Prototype Rounded
 // ---------------------
@@ -706,13 +691,7 @@ $prototype-separator-margin-top: $global-margin;
 // 40. Prototype Shadow
 // --------------------
 
-$prototype-shadow-breakpoints: $global-protot$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );ype-breakpoints;
+$prototype-shadow-breakpoints: $global-prototype-breakpoints;
 $prototype-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
 // 41. Prototype Sizing
@@ -759,13 +738,7 @@ $prototype-text-transformation: (
 // 45. Prototype Text-Utilities
 // ----------------------------
 
-$prototype-utilities-breakpoints: $global-prot$foundation-palette: (
-    "primary": #1779ba,
-    "secondary": #767676,
-    "success": #3adb76,
-    "warning": #ffae00,
-    "alert": #cc4b37,
-  );otype-breakpoints;
+$prototype-utilities-breakpoints: $global-prototype-breakpoints;
 $prototype-text-overflow: ellipsis;
 
 // 46. Responsive Embed
@@ -919,4 +892,3 @@ $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
-
