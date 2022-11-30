@@ -3,19 +3,6 @@
 <!-- .no-js attribute to make sure that stuff doesn't load in before styling info arrives -->
 <html class="no-js">    
     <head>
-<!-- 
-        <style>
-
-            ul {
-                background-color: salmon;
-            }
-
-            a#b {
-                color: black;
-            }
-
-
-        </style> -->
 
         <title>Foundation Tests</title>
 
@@ -26,12 +13,29 @@
 
     <body>
 
-        <ul class="menu align-left">
-            <li><a href="#" id="b">Home</a></li>
-            <li><a id="b" href="#">Explore</a></li>
-            <li><a href="#" id="b">Go</a></li>
-            <li><a href="#" id="b">Predict</a></li>
-        </ul>
+        <div class="top-bar">
+            <div class="top-bar-left">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Site Title</li>
+                <li>
+                  <a href="#">One</a>
+                  <ul class="menu vertical">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+              </ul>
+            </div>
+        </div>
 
 
         <div class="grid-y" style="height: 500px;">
@@ -57,7 +61,7 @@
             <div class="grid-y" style="height: 500px;">
                 <div class="grid-x grid-padding-x" style="height: 30%;">  
                     <div class="cell medium-4" style="margin: auto;">
-                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/romankilonvae_draft_03.jpg">
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/romankilonvae_draft_03.jp" alt="sorry about that this supposed to be a pic of stars smashing into each othher (change the end to jpg to make this image load">
                         <p>this is a star</p>
                     </div>
                     <div class="cell medium-4" style="background-color: green;">
@@ -70,13 +74,21 @@
             </div>
         </div>
 
+        <ul class="menu align-left" style="border-style:inset; border-color:red">
+            <li><a href="#" id="b">Home</a></li>
+            <li><a id="b" href="#">Explore</a></li>
+            <li><a href="#" id="b">Go</a></li>
+            <li><a href="#" id="b">Predict</a></li>
+        </ul>
+
 
 
 
 
 
 <!-- for some reasoon this appears in the previous text box -->
-        <div>
+        <div class="callout alert">
+            <p>It's also colored as a alert foundation pallete</p>
             <p>This is the bottom!</p>
         </div>
 
