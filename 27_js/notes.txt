@@ -1,4 +1,4 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
+Team Ruff: Ivan Yeung, Andrew Piatetsky
 SoftDev pd0
 K27 -- Basic functions in JavaScript
 2023-04-03t
@@ -8,7 +8,10 @@ DISCO
 * Ooooh, ___
 * Aaah-haa!  ____
 * Scheme wild
-Literally the same 
+Fib and fact literally the same idea
+use "console.log()" to automatically log the function calls instead of manually inputting them
+Can test java script code in the console of the inspect page and functions defined in the html pages 
+are already known
 =================================================================
 
 QCC
@@ -16,7 +19,8 @@ QCC
 * Why...?
 * Huh?
 * Teh whah now?
-* ...
+* Why is javascript native in html? why isnt it python since it works so well with jinja
+How is javascript like scheme? it feels literally exactly the same as Java except its not statically typed (can change x from a num to a string)
 =================================================================
 
 
