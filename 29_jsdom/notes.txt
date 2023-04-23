@@ -1,0 +1,18 @@
+DISCO
+
+For buttons to work, the <script></script> element must be below, otherwise cannot read the elements
+
+Very easy to input text and manipulate it in javascript
+
+
+
+QCC 
+
+
+No idea what event listener does, does it execute automatically? Shouldn't but in my tests it does
+
+what is the difference between let and var
+
+still have no idea what the DOM gives me, like I understand what it looks like visually but why is it important in any way
+
+

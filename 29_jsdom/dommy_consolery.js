@@ -114,15 +114,21 @@ var modP = function ( text ) { // function modify paragraph
 var getInput = function() {
   let form = document.getElementsByTagName("form")[0]
   let inputs = form.elements
+  let output = [];
   for (let i = 0; i < inputs.length; i++) {
-    console.log(inputs[i].value)
+    output.push(inputs[i].value);
   }
+  // if (!((output[0] == null) || (output[1] == null)))
+    console.log(output)
+    return output;
 }
-
-//insert your implementations here for...
 
 // fact
 function fact(a) {
+  if (a == "") {
+    return "input null"
+  }
+
   if (a == 1) {
       return a;
   }
@@ -131,6 +137,10 @@ function fact(a) {
 
 // fib
 function fib(a) {
+  if (a == "") {
+    return "input null"
+  }
+
   if (a < 2) {
       return a;
   }
@@ -139,11 +149,25 @@ function fib(a) {
 
 // GCD 
 function gcd(a,b) {
+  if (a == "" || b == "") {
+    return "input(s) null"
+  }
+
   if ((a % b) == 0) {
     return b;
   }
   return gcd (b, a % b);
 }
+
+
+// document.getElementById("fact").addEventListener("click",modP(fact(getInput()[0]))); 
+document.getElementById("fact").addEventListener("click",modP("hello"));
+
+// document.getElementById("fib").addEventListener("click",modP(fib(getInput()[0])));
+document.getElementById("fib").addEventListener("click",modP(fib(getInput()[0])));
+
+// document.getElementById("gcd").addEventListener("click",modP(gcd(getInput()[0],getInput()[1])));
+document.getElementById("gcd").addEventListener("click",modP((fib(getInput()[0]),getInput()[1])));
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
