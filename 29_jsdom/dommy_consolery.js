@@ -160,8 +160,20 @@ function gcd(a,b) {
 }
 
 
+const myFxn = ( text ) => {
+  // body
+  let y = "woo this is text: " + text;
+  modP(y);
+};
+
+
+
+
 // document.getElementById("fact").addEventListener("click",modP(fact(getInput()[0]))); 
-document.getElementById("fact").addEventListener("click",modP("hello"));
+// document.getElementById("fact").addEventListener("click",modP("hello"));
+document.getElementById("fact").addEventListener("click",myFxn);
+
+
 
 // document.getElementById("fib").addEventListener("click",modP(fib(getInput()[0])));
 document.getElementById("fib").addEventListener("click",modP(fib(getInput()[0])));
@@ -172,10 +184,4 @@ document.getElementById("gcd").addEventListener("click",modP((fib(getInput()[0])
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
-const myFxn = (param1, param2) => {
-  // body
-  var retVal = param1 + param2;
-  return retVal;
-};
-
 

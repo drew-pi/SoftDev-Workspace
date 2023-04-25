@@ -4,9 +4,12 @@ For buttons to work, the <script></script> element must be below, otherwise cann
 
 Very easy to input text and manipulate it in javascript
 
-
+For add event listner, the function you input cannot have parenthesis
+this works - document.getElementById("fact").addEventListener("click",myFxn);
+this does not work  - document.getElementById("fact").addEventListener("click",myFxn()));
 
 QCC 
+
 
 No idea what event listener does, does it execute automatically? Shouldn't but in my tests it does
 
