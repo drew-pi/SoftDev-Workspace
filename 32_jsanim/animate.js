@@ -10,7 +10,7 @@ ctx.fillStyle = "turqoise";
 var requestID;
 
 var clear = (e) => {
-    // e.preventDefault();
+    // Event.preventDefault();
     ctx.clearRect(0, 0, c.width, c.height);
 };
 
@@ -20,8 +20,11 @@ var dvdLogoSetup = function() {
     var rectWidth = 50;
     var rectHeight = 50;
 
-    var rectX = Math.random() * c.width-50;
-    var rectY = Math.random() * c.height-50;
+    var rectX = Math.random() * (c.width-50);
+    // var rectX = 450;
+    var rectY = Math.random() * (c.height-50);
+    // var rectY = 450;
+    console.log(rectX + " , " + rectY );
 
     var xVel = 1;
     var yVel = 1;
