@@ -1,0 +1,12 @@
+Alert leads to a pop up on the webpage
+
+If there is a hierarchy in the html (DOM) like <div> <ol> <li> Text </li> </ol> </div>, 
+it will start from the very inside in this case <li></li>, then <ol></ol>, then <div></div>
+by default at least
+
+When you add a true boolean as the third parameter to addEventListener, it completely flips the order upside down
+addEventListener('click', function, true); ---> it goes <div></div>, <ol></ol>, then <li></li>
+However messing with which ones have the true boolean will change the order
+
+e.stopPropogation() will stop the pop up from coming up, will stop all succeeding events to be triggered
+
