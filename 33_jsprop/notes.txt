@@ -10,3 +10,8 @@ However messing with which ones have the true boolean will change the order
 
 e.stopPropogation() will stop the pop up from coming up, will stop all succeeding events to be triggered
 
+When we do the default (without boolean or with a false as the third parameter) it is called Bubbling because it "propagates upward through its ancestors after being handled by the event's target"
+ - so it goes from <li></li> outwards towards the root in this case <div></div>
+
+When we add the true variable it is called Capturing where it goes the other way starting at the ancestor and propagating down to the descendant nodes
+- so goes from <div></div> down to <li></li> eventually
